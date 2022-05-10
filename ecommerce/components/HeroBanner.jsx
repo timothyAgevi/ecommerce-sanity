@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'next/link';
 const HeroBanner = () => {
   return (
     <div className='hero-banner-container'>
@@ -8,6 +8,11 @@ const HeroBanner = () => {
   <h3> MID TEXT</h3>
   <img src="" alt="headphones"
   className='hero-banner-image'/>
+  <div>
+    <Link href="/product/ID">
+      <button type='button'>Button Text</button>
+    </Link>
+  </div>
 </div>
 
     </div>
