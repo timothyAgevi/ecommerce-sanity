@@ -8,3 +8,5 @@ export const client =sanityClient({
     useCdn:true,
     token:process.env.NEXT_PUBLIC_SANITY_TOKEN
 })
+//to use sanity images
+const builder=imageUrlBuilder(client)
