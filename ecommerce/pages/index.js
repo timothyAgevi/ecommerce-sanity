@@ -1,7 +1,7 @@
 import React from 'react'
 import{ Product,FooterBanner,HeroBanner}from '../components';
 import {client} from '../lib/client';
-const Home = () => {
+const Home = (products,bannerData) => {
   return ( 
   <>
   <HeroBanner/>
@@ -22,6 +22,7 @@ const Home = () => {
   )
   
 }
+// fetch function
 export const getServerSideProps=async()=>{
   const query ='*[_type=="product"]';
   const products =await client.fetch(query);
