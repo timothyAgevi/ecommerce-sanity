@@ -3,6 +3,7 @@ import {toast} from 'react-hot-toast';
 //createContext hook
 const Context=createContext();
 //context functional component
-export const StateContext=()=>{
-    
+export const StateContext=({children})=>{
+const [showCart,setShowCart] = useState(false);
+const [cartItem, setcartItem] = useState()
 }
