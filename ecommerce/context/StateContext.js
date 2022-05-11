@@ -15,8 +15,13 @@ const incQty=()=>{
 }
 //decrease Quantity function
 const decQty=()=>{
-    setQty( (prevQty)=>  
-        prevQty -1)};
+    setQty( (prevQty)=>{  
+        if(prevQty-1<1)return 1;
+
+        return prevQty -1
+
+    });
+    }
         
     
                 
