@@ -5,5 +5,6 @@ const Context=createContext();
 //context functional component
 export const StateContext=({children})=>{
 const [showCart,setShowCart] = useState(false);
-const [cartItem, setcartItem] = useState()
+const [cartItem, setcartItem] = useState();
+const [totalPrice, setTotalPrice] = useState()
 }
