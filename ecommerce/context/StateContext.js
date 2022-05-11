@@ -12,7 +12,14 @@ const [qty, seQtty] = useState(1);
 
 //context provider
 return(
-    <Context.Provider>
+    <Context.Provider value={ {
+        showCart,
+        cartItems,
+        totalPrice,
+        totalQuantities,
+        qty
+    }}>
+        
         {children}
     </Context.Provider>
 )
