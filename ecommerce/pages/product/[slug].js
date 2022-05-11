@@ -12,7 +12,28 @@ const ProductDetails = ({product,products}) => {
     </div>
   )
 }
+//getStaticPaths function
+export const getStaticPaths=async ()=>{
+    const query=`*[_type=="product"]{
 
+        slig{
+            current
+        }
+    }`;
+    const products=await client.fetch(query);
+    const paths= products.map( (product)=> ({
+        params:{
+            slug:product.slug.current
+        }
+    }));
+    return{
+        paths,
+        fallback:'blocking'
+    }
+}
+
+
+//getStaticProps
 export const getStaticProps = async ({params:{slug}}) => {
     const query = `*[_type == "product" && slug.current=='${slug}'][0]`;
     //query to fetch similar prodcts
@@ -20,8 +41,8 @@ export const getStaticProps = async ({params:{slug}}) => {
 
     const product= await client.fetch(query);
   const products=await client.fetch(productsQuery)
-    // const bannerQuery = '*[_type == "banner"]';
-    // const bannerData = await client.fetch(bannerQuery);
+   
+  console.log(product);
   
     return {
       props: { products, product }
