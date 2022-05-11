@@ -10,4 +10,10 @@ const [totalPrice, setTotalPrice] = useState();
 const [totalQuantities, settotalQuantities] = useState();
 const [qty, seQtty] = useState(1);
 
+//context provider
+return(
+    <Context.Provider>
+        {children}
+    </Context.Provider>
+)
 }
