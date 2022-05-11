@@ -4,7 +4,10 @@ function Footer() {
   return (
     <div className='footer-container'>
 <p> 2022 shambaCoin All rights reserved</p>
-
+<p className='icons'>
+  <AiFillInstagram/>
+  <AiOutlineTwitter/>
+</p>
     </div>
   )
 }
