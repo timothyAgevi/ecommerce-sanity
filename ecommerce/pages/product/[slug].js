@@ -17,6 +17,7 @@ const ProductDetails = ({product,products}) => {
 ))}
 </div> */}
         </div>
+        <div className='product-details-desc'></div>
     </div>
   )
 }
