@@ -8,11 +8,19 @@ const [showCart,setShowCart] = useState(false);
 const [cartItems, setcartItem] = useState();
 const [totalPrice, setTotalPrice] = useState();
 const [totalQuantities, settotalQuantities] = useState();
-const [qty, seQtty] = useState(1);
+const [qty, setQty] = useState(1);
 //increaseQuantity function
 const incQty=()=>{
-    seQtty( (prevQty)=>prevQty +1)
+    setQty( (prevQty)=>prevQty +1)
 }
+//decrease Quantity function
+const decQty=()=>{
+    setQty( (prevQty)=>  
+        prevQty -1)};
+        
+    
+                
+
 //context provider
 return(
     <Context.Provider value={ {
