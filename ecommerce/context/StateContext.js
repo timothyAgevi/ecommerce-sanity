@@ -8,5 +8,6 @@ const [showCart,setShowCart] = useState(false);
 const [cartItem, setcartItem] = useState();
 const [totalPrice, setTotalPrice] = useState();
 const [totalQuantities, settotalQuantities] = useState();
+const [qty, seQtty] = useState(1);
 
 }
