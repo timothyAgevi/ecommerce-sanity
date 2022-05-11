@@ -1,5 +1,6 @@
 import React from 'react'
 import {client,urlFor}from '../../lib/client';
+
 const ProductDetails = ({product,products}) => {
     const {image,name,details,price}= product;
   return (
@@ -17,7 +18,9 @@ const ProductDetails = ({product,products}) => {
 ))}
 </div> */}
         </div>
-        <div className='product-details-desc'></div>
+        <div className='product-details-desc'>
+            <h1> {name}</h1>
+        </div>
     </div>
   )
 }
