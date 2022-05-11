@@ -1,6 +1,6 @@
 import React from 'react'
 import {client,urlFor}from '../../lib/client';
-const ProductDetails = () => {
+const ProductDetails = ({product,products}) => {
   return (
     <div>
         <div className='product-detail-container'>
@@ -19,11 +19,11 @@ export const getStaticProps = async ({params:{slug}}) => {
 
     const product= await client.fetch(query);
   const products=await client.fetch(productsQuery)
-    const bannerQuery = '*[_type == "banner"]';
-    const bannerData = await client.fetch(bannerQuery);
+    // const bannerQuery = '*[_type == "banner"]';
+    // const bannerData = await client.fetch(bannerQuery);
   
     return {
-      props: { products, bannerData }
+      props: { products, product }
     }
   }
 
