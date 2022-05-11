@@ -1,5 +1,6 @@
 import React from 'react'
 import {client,urlFor}from '../../lib/client';
+import { AiOtlineMinus,AiOtlinePlus,AiFillStar,AiOutlineStar} from 'react-icons';
 
 const ProductDetails = ({product,products}) => {
     const {image,name,details,price}= product;
@@ -21,7 +22,7 @@ const ProductDetails = ({product,products}) => {
         <div className='product-details-desc'>
             <h1> {name}</h1>
             <div className='reviews'>
-                
+
             </div>
         </div>
     </div>
