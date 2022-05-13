@@ -45,3 +45,4 @@ return(
     </Context.Provider>
 )
 }
+export const useStateContext = () => useContext(Context);
