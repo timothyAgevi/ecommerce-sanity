@@ -30,7 +30,15 @@ return(
         cartItems,
         totalPrice,
         totalQuantities,
-        qty
+        qty,
+        incQty,
+        decQty,
+        onAdd,
+        toggleCartItemQuanitity,
+        onRemove,
+        setCartItems,
+        setTotalPrice,
+        setTotalQuantities 
     }}>
         
         {children}
