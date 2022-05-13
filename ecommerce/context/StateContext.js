@@ -1,5 +1,5 @@
 import react ,{createContext,useContext,useState,useEffect}from 'react';
-import {toast} from 'react-hot-toast';
+import {Toaster} from 'react-hot-toast';
 //createContext hook
 const Context=createContext();
 //context functional component
@@ -22,10 +22,7 @@ const decQty=()=>{
 
     });
     }
-        
-    
                 
-
 //context provider
 return(
     <Context.Provider value={ {
