@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import {AiOutlineShopping}from 'react-icons/ai';
-import { Cart }from './Cart';
+import { Cart }from './';
 const Navbar = () => {
   return (
     <div className='navbar-container'>
