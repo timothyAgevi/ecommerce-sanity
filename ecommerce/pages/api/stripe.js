@@ -14,7 +14,7 @@ export default async function handler(req, res) {
             { shipping_rate: 'shr_1L01fmKR6HN9VIbuNiQ8rFY9'},
             { shipping_rate: 'shr_1L01iUKR6HN9VIbul66kyAxC'}
         ],
-        line_items: req.body.cartItems.map( (item)=>{//map thru items since modify info for each item
+        line_items: req.body.map( (item)=>{//map thru items since modify info for each item
           const img=item.image[0].asset._ref;
           const newImage=img.replace('image','https://cdn.sanity.io/images/sy63nsd1/production/').replace('-webp','.webp');//webp is img format can convert to jpg/png
           //object represeting one of the products
