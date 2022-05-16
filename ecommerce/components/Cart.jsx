@@ -14,7 +14,7 @@ const Cart = () => {
 
   const handleCheckout = async () => {
     const stripe = await getStripe();
-
+//request to next backend
     const response = await fetch('/api/stripe', {
       method: 'POST',
       headers: {
