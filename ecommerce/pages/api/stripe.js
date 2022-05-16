@@ -21,6 +21,7 @@ export default async function handler(req, res) {
         submit_type:'pay',
         mode:'payment',
         payment_method_types:[ 'card'],
+        billing_address_collection:'auto',
         line_items: [
         {
           // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
