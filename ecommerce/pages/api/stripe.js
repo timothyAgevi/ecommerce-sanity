@@ -30,10 +30,11 @@ export default async function handler(req, res) {
                 enabled:true,
                 minimum:1,
               },
+              quantity:item.quantity
           };
 
         }),
-      mode: 'payment',
+      
       success_url: `${req.headers.origin}/?success=true`,
       cancel_url: `${req.headers.origin}/?canceled=true`
     }
