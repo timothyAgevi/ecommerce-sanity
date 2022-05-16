@@ -19,6 +19,7 @@ export default async function handler(req, res) {
     try {
     const params = {
         submit_type:'pay',
+        mode:'payment',
         line_items: [
         {
           // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
