@@ -10,7 +10,7 @@ export default async function handler(req, res) {
         billing_address_collection:'auto',
         shipping_options:[
             { shipping_rate: 'shr_1L01fmKR6HN9VIbuNiQ8rFY9'},
-            { shipping_rate: ''}
+            { shipping_rate: 'shr_1L01iUKR6HN9VIbul66kyAxC'}
         ],
         line_items: [
         {
