@@ -27,8 +27,9 @@ export default async function handler(req, res) {
                 unit_amount:item.price*100 //since unit amount must be in cents
               },
               adjustable_quantity:{
-                
-              }
+                enabled:true,
+                minimum:1,
+              },
           };
 
         }),
