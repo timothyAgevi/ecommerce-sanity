@@ -15,8 +15,21 @@ export default async function handler(req, res) {
         ],
         line_items: req.body.cartItems.map( (item)=>{//map thru items since modify info for each item
           const img=item.image[0].asset._ref;
-          const newImage=img.replace('image','https://cdn.sanity.io/images/sy63nsd1/production/').replace('-webp','.webp');
-          console.log('IMAGE',newImage)
+          const newImage=img.replace('image','https://cdn.sanity.io/images/sy63nsd1/production/').replace('-webp','.webp');//webp is img format can convert to jpg/png
+          //object represeting one of the products
+          return{
+              price_data:{
+                currency:'usd',
+                product_data:{
+                  name:item.name,
+                  images:[newImage],
+                },
+                unit_amount:item.price*100 //since unit amount must be in cents
+              },
+              adjustable_quantity:{
+                
+              }
+          };
 
         }),
       mode: 'payment',
